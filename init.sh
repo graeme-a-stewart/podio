@@ -7,14 +7,6 @@ if [ "$1" == "--nolcg" ]; then
 	NOLCG=1
 fi
 
-# If FCCEDM is set then the environment is setup
-if [ -z "$FCCEDM" ]; then
-	# If PODIO is not set, make a guess...
-	if [ -z "$PODIO" ]; then
-    	export PODIO=$PWD/install
-    	echo "PODIO has been to $PODIO"
-	fi
-fi
 
 # Try to bootstrap a sensible development environment if it seems one
 # is not setup already
